@@ -62,7 +62,9 @@
     <nav class="hdr__nav hdr__nav--right" data-i18n-label="a11y.nav" aria-label="Основная навигация">
       <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
     </nav>
-    <button class="hdr__cta" data-open-booking data-i18n="nav.booking">Запись</button>
+
+    <!-- CTA ведёт напрямую в Telegram -->
+    <a class="hdr__cta" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="nav.booking">Запись</a>
 
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobnav"
             data-i18n-label="a11y.menuOpen" aria-label="Открыть меню">
@@ -75,7 +77,8 @@
   <a href="#services" data-i18n="nav.services">Услуги</a>
   <a href="#gallery" data-i18n="nav.gallery">Галерея</a>
   <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
-  <button class="mobnav__cta" data-open-booking data-i18n="hero.cta">Записаться на консультацию</button>
+  <a href="#contact" data-i18n="nav.contact">Контакты</a>
+  <a class="mobnav__cta" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="cta.tg">Написать в Telegram</a>
 </div>
 
 <main id="top">
@@ -98,7 +101,7 @@
     </h1>
     <p class="hero__lead reveal" data-d="4" data-i18n="hero.lead">Мы работаем с автомобилями, к которым предъявляют требования, а не пожелания. Закрытый бокс, поканальное освещение, контроль толщины лака на каждом этапе.</p>
     <div class="hero__actions reveal" data-d="5">
-      <button class="btn btn--gold" data-open-booking data-i18n="hero.cta">Записаться на консультацию</button>
+      <a class="btn btn--gold" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="cta.tgLong">Записаться через Telegram</a>
       <a class="btn btn--ghost" href="#gallery" data-i18n="hero.cta2">Смотреть работы</a>
     </div>
   </div>
@@ -143,7 +146,7 @@
             <li data-i18n="svc1.d4">Кондиционирование кожи, восстановление алькантары</li>
           </ul>
         </div>
-        <button class="card__link" data-open-booking data-service="detailing" data-i18n="services.discuss">Обсудить проект</button>
+        <a class="card__link" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="services.discuss">Обсудить в Telegram</a>
       </div>
     </article>
 
@@ -168,7 +171,7 @@
             <li data-i18n="svc2.d4">Гарантийный лист и регламент обслуживания</li>
           </ul>
         </div>
-        <button class="card__link" data-open-booking data-service="ceramic" data-i18n="services.discuss">Обсудить проект</button>
+        <a class="card__link" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="services.discuss">Обсудить в Telegram</a>
       </div>
     </article>
 
@@ -193,7 +196,7 @@
             <li data-i18n="svc3.d4">Калибровка без выхода за ресурс агрегатов</li>
           </ul>
         </div>
-        <button class="card__link" data-open-booking data-service="tuning" data-i18n="services.discuss">Обсудить проект</button>
+        <a class="card__link" href="https://t.me/streetvibetuning" target="_blank" rel="noopener" data-i18n="services.discuss">Обсудить в Telegram</a>
       </div>
     </article>
   </div>
@@ -325,25 +328,49 @@
   </div>
 </section>
 
-<!-- ══════════════════════════ ЗАПИСЬ ══════════════════════════ -->
-<section class="section section--book" id="booking">
-  <div class="book">
-    <div class="book__left">
-      <p class="kicker reveal" data-i18n="booking.kicker">Запись</p>
-      <h2 class="shead__h reveal" data-d="1" data-i18n="booking.title">Начнём с осмотра</h2>
-      <p class="book__lead reveal" data-d="2" data-i18n="booking.lead">Консультация проходит в ателье и занимает около сорока минут: дефектовка, замеры, письменная смета.</p>
-      <div class="reveal" data-d="3">
-        <button class="btn btn--gold book__cta" data-open-booking data-i18n="booking.cta">Открыть форму записи</button>
-      </div>
-    </div>
+<!-- ══════════════════════ КОНТАКТЫ · КАНАЛЫ СВЯЗИ ═══════════════ -->
+<section class="section section--contact" id="contact">
+  <header class="shead">
+    <p class="kicker reveal" data-i18n="contact.kicker">Связаться с ателье</p>
+    <h2 class="shead__h reveal" data-d="1" data-i18n-html="contact.title.html">Напишите — ответим<br>в тот же день</h2>
+    <p class="shead__note reveal" data-d="2" data-i18n="contact.lead">Опишите автомобиль и задачу в Telegram: пришлём ориентир по срокам и стоимости, назначим время осмотра. Консультация ни к чему вас не обязывает.</p>
+  </header>
 
-    <dl class="contacts reveal" data-d="2">
-      <div><dt data-i18n="contacts.address">Адрес</dt><dd data-i18n-html="contacts.address.html">Ташкент, Мирзо-Улугбекский район<br>ориентир уточним при записи</dd></div>
-      <div><dt data-i18n="contacts.phone">Телефон</dt><dd><a href="tel:+998900000000">+998 90 000 00 00</a></dd></div>
-      <div><dt data-i18n="contacts.instagram">Instagram</dt><dd><a href="https://instagram.com/" target="_blank" rel="noopener">@streetvibetuning</a></dd></div>
-      <div><dt data-i18n="contacts.hours">Часы</dt><dd data-i18n="contacts.hours.v">Пн–Сб, 09:00 — 20:00</dd></div>
-    </dl>
+  <div class="channels">
+    <a class="chan chan--tg reveal" href="https://t.me/streetvibetuning" target="_blank" rel="noopener">
+      <span class="chan__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="chan__body">
+        <b class="chan__name">Telegram</b>
+        <span class="chan__handle">@streetvibetuning</span>
+        <span class="chan__desc" data-i18n="chan.tg.desc">Прямая линия с ателье. Ответим в рабочее время, обсудим задачу и назовём срок.</span>
+      </span>
+      <span class="chan__go" data-i18n="chan.tg.go">Написать в Telegram</span>
+    </a>
+
+    <a class="chan chan--ig reveal" data-d="1" href="https://instagram.com/streetvibetuning" target="_blank" rel="noopener">
+      <span class="chan__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4.2"/>
+          <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span class="chan__body">
+        <b class="chan__name">Instagram</b>
+        <span class="chan__handle">@streetvibetuning</span>
+        <span class="chan__desc" data-i18n="chan.ig.desc">Съёмки из бокса и работы целиком — до, в процессе и после. Пишите в директ.</span>
+      </span>
+      <span class="chan__go" data-i18n="chan.ig.go">Открыть Instagram</span>
+    </a>
   </div>
+
+  <dl class="contacts reveal" data-d="2">
+    <div><dt data-i18n="contacts.address">Адрес</dt><dd data-i18n-html="contacts.address.html">Ташкент, Мирзо-Улугбекский район<br>ориентир уточним при записи</dd></div>
+    <div><dt data-i18n="contacts.phone">Телефон</dt><dd><a href="tel:+998900000000">+998 90 000 00 00</a></dd></div>
+    <div><dt data-i18n="contacts.hours">Часы</dt><dd data-i18n="contacts.hours.v">Пн–Сб, 09:00 — 20:00</dd></div>
+  </dl>
 </section>
 
 </main>
@@ -355,68 +382,6 @@
     <span class="foot__y">© <span id="year">2026</span> SVT. <span data-i18n="foot.rights">Все права защищены.</span></span>
   </div>
 </footer>
-
-<!-- ══════════════════════ МОДАЛЬНОЕ ОКНО ЗАПИСИ ═════════════════ -->
-<dialog class="modal" id="bookingModal" aria-labelledby="modalTitle">
-  <div class="modal__box">
-    <button class="modal__close" id="modalClose" data-i18n-label="form.close" aria-label="Закрыть">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-    </button>
-
-    <!-- Панель 1: форма -->
-    <div class="modal__view" data-view="form">
-      <p class="kicker" data-i18n="booking.kicker">Запись</p>
-      <h2 class="modal__h" id="modalTitle" data-i18n="form.title">Заявка на консультацию</h2>
-      <p class="modal__sub" data-i18n="form.sub">Ответим в течение рабочего дня и предложим время осмотра.</p>
-
-      <form class="form" id="bookingForm" novalidate>
-        <div class="field">
-          <label for="f-name" data-i18n="form.name">Имя</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться">
-          <p class="err" data-err="name"></p>
-        </div>
-        <div class="field">
-          <label for="f-phone" data-i18n="form.phone">Телефон</label>
-          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" data-i18n-ph="form.phone.ph" placeholder="+998 __ ___ __ __">
-          <p class="err" data-err="phone"></p>
-        </div>
-        <div class="field">
-          <label for="f-car" data-i18n="form.car">Автомобиль</label>
-          <input id="f-car" name="car" type="text" data-i18n-ph="form.car.ph" placeholder="Марка, модель, год">
-          <p class="err" data-err="car"></p>
-        </div>
-        <div class="field">
-          <label for="f-service" data-i18n="form.service">Направление</label>
-          <select id="f-service" name="service">
-            <option value="detailing" data-i18n="form.opt.detailing">Премиум детейлинг</option>
-            <option value="ceramic" data-i18n="form.opt.ceramic">Керамическое покрытие</option>
-            <option value="tuning" data-i18n="form.opt.tuning">Технический тюнинг и выхлоп</option>
-            <option value="other" data-i18n="form.opt.other">Пока не определился</option>
-          </select>
-        </div>
-        <div class="field field--wide">
-          <label for="f-note"><span data-i18n="form.note">Задача</span> <span class="opt" data-i18n="form.note.opt">— по желанию</span></label>
-          <textarea id="f-note" name="note" rows="3" data-i18n-ph="form.note.ph" placeholder="Что хотите получить в результате"></textarea>
-        </div>
-
-        <button class="btn btn--gold btn--full" type="submit" id="submitBtn" data-i18n="form.submit">Отправить заявку</button>
-        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-
-    <!-- Панель 2: успешная отправка -->
-    <div class="modal__view" data-view="done" hidden>
-      <div class="done">
-        <div class="done__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h2 class="modal__h" data-i18n="ok.title">Заявка принята</h2>
-        <p class="modal__sub" data-i18n="ok.text">Перезвоним в течение рабочего дня и предложим время осмотра.</p>
-        <button class="btn btn--ghost" id="doneClose" data-i18n="form.close">Закрыть</button>
-      </div>
-    </div>
-  </div>
-</dialog>
 
 <script src="i18n.js"></script>
 <script src="main.js"></script>

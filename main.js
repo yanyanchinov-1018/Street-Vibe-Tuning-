@@ -1,6 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    STREET VIBE TUNING — поведение страницы
-   Локализация · модальная запись · галерея · мобильная навигация.
+   Локализация · галерея · мобильная навигация.
+   Заявки идут напрямую в Telegram / Instagram — форм на сайте нет.
    Всё на transform/opacity, всё уважает prefers-reduced-motion.
    ═══════════════════════════════════════════════════════════ */
 (() => {
@@ -48,7 +49,6 @@
     $$('.lang__btn').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     $$('.card__toggle').forEach(syncToggleLabel);
     burger.setAttribute('aria-label', t(mobnav.hidden ? 'a11y.menuOpen' : 'a11y.menuClose'));
-    formStatus.textContent = '';
 
     fitHero();
     if (save) { try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* игнорируем */ } }
@@ -94,7 +94,7 @@
   };
   burger.addEventListener('click', () => setMenu(mobnav.hidden));
   mobnav.addEventListener('click', (e) => {
-    if (e.target.closest('a, button')) setMenu(false);
+    if (e.target.closest('a')) setMenu(false);
   });
 
   /* ═══════════════════ ПОЯВЛЕНИЕ БЛОКОВ ═════════════════════ */
@@ -156,7 +156,7 @@
 
     // «Жидкий металл»: блик следует за курсором внутри элемента
     document.addEventListener('pointermove', (e) => {
-      const el = e.target.closest('.btn, .card, .rev, .chip, .card__link, .card__toggle');
+      const el = e.target.closest('.btn, .card, .rev, .chip, .chan, .card__link, .card__toggle');
       if (!el) return;
       const r = el.getBoundingClientRect();
       el.style.setProperty('--bx', `${e.clientX - r.left}px`);
@@ -245,124 +245,6 @@
       if (e.key === 'ArrowLeft')  { e.preventDefault(); set(now - 4); }
       if (e.key === 'ArrowRight') { e.preventDefault(); set(now + 4); }
     });
-  });
-
-  /* ═══════════════════ МОДАЛЬНОЕ ОКНО ЗАПИСИ ════════════════ */
-  const modal = $('#bookingModal');
-  const form = $('#bookingForm');
-  const formStatus = $('#formStatus');
-  const submitBtn = $('#submitBtn');
-  const viewForm = $('[data-view="form"]', modal);
-  const viewDone = $('[data-view="done"]', modal);
-  let lastFocused = null;
-
-  const showView = (done) => {
-    viewForm.hidden = done;
-    viewDone.hidden = !done;
-  };
-
-  function openModal(service) {
-    lastFocused = document.activeElement;
-    showView(false);
-    formStatus.textContent = '';
-    if (service) form.elements.service.value = service;
-    modal.showModal();                       // <dialog> сам держит фокус внутри и закрывается по Esc
-    document.body.classList.add('is-locked');
-    requestAnimationFrame(() => modal.classList.add('is-open'));
-    setTimeout(() => form.elements.name.focus({ preventScroll: true }), 120);
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-open');
-    const finish = () => {
-      modal.close();
-      document.body.classList.remove('is-locked');
-      if (lastFocused) lastFocused.focus({ preventScroll: true });
-    };
-    if (calm) finish(); else setTimeout(finish, 260);
-  }
-
-  document.addEventListener('click', (e) => {
-    const opener = e.target.closest('[data-open-booking]');
-    if (!opener) return;
-    e.preventDefault();
-    if (!mobnav.hidden) setMenu(false);
-    openModal(opener.dataset.service);
-  });
-
-  $('#modalClose').addEventListener('click', closeModal);
-  $('#doneClose').addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  modal.addEventListener('cancel', (e) => { e.preventDefault(); closeModal(); });
-
-  /* ── Валидация ─────────────────────────────────────────────── */
-  const rules = {
-    name:  (v) => (v.trim().length >= 2 ? '' : 'err.name'),
-    phone: (v) => (/^\+?[\d\s()-]{9,20}$/.test(v.trim()) ? '' : 'err.phone'),
-    car:   (v) => (v.trim().length >= 2 ? '' : 'err.car'),
-  };
-
-  const validate = () => {
-    let ok = true;
-    Object.entries(rules).forEach(([name, check]) => {
-      const input = form.elements[name];
-      const key = check(input.value);
-      input.closest('.field').classList.toggle('is-bad', Boolean(key));
-      input.setAttribute('aria-invalid', String(Boolean(key)));
-      $(`[data-err="${name}"]`).textContent = key ? t(key) : '';
-      if (key) ok = false;
-    });
-    return ok;
-  };
-
-  /**
-   * Отправляет заявку в канал, где её увидят.
-   * ────────────────────────────────────────────────────────────
-   * TODO (решение за вами): сейчас работает демо-режим — заявка
-   * логируется, и форма показывает экран успеха. Подключите канал:
-   *   • Telegram Bot API — sendMessage в чат ателье;
-   *   • serverless-функция (Vercel) с записью в CRM/таблицу;
-   *   • сторонний форм-сервис.
-   * Токен бота нельзя держать в этом файле — он публичный.
-   *
-   * @param {{name:string, phone:string, car:string, service:string, note:string, lang:string}} payload
-   * @returns {Promise<void>} успех — resolve, отказ — reject(Error)
-   */
-  async function deliverBooking(payload) {
-    console.info('[SVT] заявка:', payload);
-    await new Promise((r) => setTimeout(r, 700));
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    formStatus.textContent = '';
-    if (!validate()) {
-      formStatus.textContent = t('err.form');
-      const bad = form.querySelector('.is-bad input');
-      if (bad) bad.focus();
-      return;
-    }
-
-    const payload = Object.assign(Object.fromEntries(new FormData(form).entries()), { lang });
-    submitBtn.disabled = true;
-    submitBtn.textContent = t('form.sending');
-
-    try {
-      await deliverBooking(payload);
-      form.reset();
-      showView(true);
-      $('#doneClose').focus({ preventScroll: true });
-    } catch (err) {
-      formStatus.textContent = t('fail');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = t('form.submit');
-    }
-  });
-
-  form.addEventListener('input', (e) => {
-    const field = e.target.closest('.field');
-    if (field && field.classList.contains('is-bad')) validate();
   });
 
   /* ═══════════════════ СТАРТ ════════════════════════════════ */
