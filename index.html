@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Street Vibe Tuning — Искусство безупречности | Тюнинг-ателье и детейлинг в Ташкенте</title>
+<meta name="description" id="metaDesc" content="Street Vibe Tuning — тюнинг-ателье и студия детейлинга в Ташкенте. Премиум-детейлинг, керамическое покрытие, технический тюнинг и тюнинг выхлопа.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 80'%3E%3Cpath d='M36 2 68 20.5v39L36 78 4 59.5v-39z' fill='%230A0A0B' stroke='%23C8A24A' stroke-width='5'/%3E%3Cpath d='M20 26h9l7 22 7-22h9L41 60h-10z' fill='%23C8A24A'/%3E%3C/svg%3E">
+
+<meta property="og:title" content="Street Vibe Tuning — Искусство безупречности">
+<meta property="og:description" content="Тюнинг-ателье и студия детейлинга премиум-класса. Ташкент.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Сквозной световой слой: гексагональные панели гаража -->
+<div class="hexrig" aria-hidden="true">
+  <div class="hexrig__base"></div>
+  <div class="hexrig__glow"></div>
+</div>
+
+<a class="skip" href="#services" data-i18n="a11y.skip">Перейти к услугам</a>
+
+<!-- ══════════════════════════ ХЕДЕР ══════════════════════════ -->
+<header class="hdr" id="hdr">
+  <nav class="hdr__nav hdr__nav--left" data-i18n-label="a11y.nav" aria-label="Основная навигация">
+    <a href="#services" data-i18n="nav.services">Услуги</a>
+    <a href="#gallery" data-i18n="nav.gallery">Галерея</a>
+  </nav>
+
+  <a class="brand" href="#top" data-i18n-label="a11y.home" aria-label="Street Vibe Tuning — на главную">
+    <svg class="brand__mark" viewBox="0 0 72 80" role="img" aria-hidden="true">
+      <defs>
+        <linearGradient id="au" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#F0D48A"/>
+          <stop offset="52%" stop-color="#C8A24A"/>
+          <stop offset="100%" stop-color="#8A6A2C"/>
+        </linearGradient>
+      </defs>
+      <path class="brand__hex" d="M36 2 68 20.5v39L36 78 4 59.5v-39z"/>
+      <path class="brand__v" d="M20 26h9l7 22 7-22h9L41 60h-10z"/>
+      <path class="brand__s" d="M14 30c0-4 3-6 8-6h6v6h-7v3h4c4 0 6 2 6 6v5c0 4-3 6-7 6H14v-6h9v-4h-4c-4 0-5-2-5-6z" opacity=".9"/>
+      <path class="brand__t" d="M44 24h16v6h-5v14h-6V30h-5z" opacity=".9"/>
+    </svg>
+    <span class="brand__word">Street Vibe Tuning</span>
+  </a>
+
+  <div class="hdr__right">
+    <!-- Языковой переключатель -->
+    <div class="lang" id="lang" role="group" data-i18n-label="a11y.lang" aria-label="Выбор языка">
+      <button class="lang__btn" data-lang="ru" aria-pressed="true">RU</button>
+      <button class="lang__btn" data-lang="uz" aria-pressed="false">UZ</button>
+      <button class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <nav class="hdr__nav hdr__nav--right" data-i18n-label="a11y.nav" aria-label="Основная навигация">
+      <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+    </nav>
+    <button class="hdr__cta" data-open-booking data-i18n="nav.booking">Запись</button>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobnav"
+            data-i18n-label="a11y.menuOpen" aria-label="Открыть меню">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobnav" id="mobnav" hidden>
+  <a href="#services" data-i18n="nav.services">Услуги</a>
+  <a href="#gallery" data-i18n="nav.gallery">Галерея</a>
+  <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+  <button class="mobnav__cta" data-open-booking data-i18n="hero.cta">Записаться на консультацию</button>
+</div>
+
+<main id="top">
+
+<!-- ══════════════════════════ ГЕРОЙ ══════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__media" aria-hidden="true">
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="none"></video>
+    <div class="hero__stage"></div>
+    <div class="hero__sweep"></div>
+    <div class="hero__vignette"></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="kicker reveal" data-i18n="hero.kicker">Ташкент · тюнинг-ателье и детейлинг-студия</p>
+    <h1 class="hero__title">
+      <span class="hero__brandline reveal" data-d="1">Street Vibe Tuning</span>
+      <span class="hero__word reveal" data-d="2" data-i18n="hero.w1">Искусство</span>
+      <span class="hero__word hero__word--out reveal" data-d="3" data-i18n="hero.w2">безупречности</span>
+    </h1>
+    <p class="hero__lead reveal" data-d="4" data-i18n="hero.lead">Мы работаем с автомобилями, к которым предъявляют требования, а не пожелания. Закрытый бокс, поканальное освещение, контроль толщины лака на каждом этапе.</p>
+    <div class="hero__actions reveal" data-d="5">
+      <button class="btn btn--gold" data-open-booking data-i18n="hero.cta">Записаться на консультацию</button>
+      <a class="btn btn--ghost" href="#gallery" data-i18n="hero.cta2">Смотреть работы</a>
+    </div>
+  </div>
+
+  <div class="hero__facts reveal" data-d="6">
+    <div class="fact"><b>9</b><span data-i18n="hero.f1">лет в закрытом сегменте</span></div>
+    <div class="fact"><b>1 400+</b><span data-i18n="hero.f2">принятых автомобилей</span></div>
+    <div class="fact"><b data-i18n="hero.f3v">5 лет</b><span data-i18n="hero.f3">гарантии на керамику</span></div>
+    <div class="fact"><b>1</b><span data-i18n="hero.f4">автомобиль в посте одновременно</span></div>
+  </div>
+
+  <a class="hero__scroll" href="#services" aria-hidden="true" tabindex="-1"><span></span><i data-i18n="hero.scroll">Далее</i></a>
+</section>
+
+<!-- ══════════════════════════ УСЛУГИ ══════════════════════════ -->
+<section class="section" id="services">
+  <header class="shead">
+    <p class="kicker reveal" data-i18n="services.kicker">Направления ателье</p>
+    <h2 class="shead__h reveal" data-d="1" data-i18n-html="services.title.html">Три компетенции.<br>Ни одной смежной.</h2>
+    <p class="shead__note reveal" data-d="2" data-i18n="services.note">Мы намеренно не берём кузовной ремонт и покраску. Ателье занимается тем, что доводит автомобиль до состояния, в котором его показывают, — и тем, что заставляет его ехать.</p>
+  </header>
+
+  <div class="cards">
+    <article class="card reveal">
+      <div class="card__plate card__plate--detail" aria-hidden="true"></div>
+      <div class="card__body">
+        <h3 class="card__h" data-i18n="svc1.title">Премиум детейлинг</h3>
+        <p class="card__p" data-i18n="svc1.desc">Многоступенчатая полировка под контролем толщиномера, глубокая химчистка салона, восстановление кожи и полировка оптики.</p>
+        <ul class="spec">
+          <li><span data-i18n="svc1.s1l">Срок</span><b data-i18n="svc1.s1v">3–6 дней</b></li>
+          <li><span data-i18n="svc1.s2l">Пост</span><b data-i18n="svc1.s2v">Закрытый бокс</b></li>
+          <li><span data-i18n="svc1.s3l">Контроль</span><b data-i18n="svc1.s3v">Толщиномер + LED</b></li>
+        </ul>
+        <button class="card__toggle" aria-expanded="false" aria-controls="det1">
+          <span class="card__toggle-txt" data-i18n="services.more">Подробнее</span>
+        </button>
+        <div class="card__details" id="det1" hidden>
+          <ul>
+            <li data-i18n="svc1.d1">Дефектовка лака по 60 точкам с фотофиксацией</li>
+            <li data-i18n="svc1.d2">Полировка в 2–3 этапа, абразивы под конкретный лак</li>
+            <li data-i18n="svc1.d3">Химчистка салона с экстракцией и озонированием</li>
+            <li data-i18n="svc1.d4">Кондиционирование кожи, восстановление алькантары</li>
+          </ul>
+        </div>
+        <button class="card__link" data-open-booking data-service="detailing" data-i18n="services.discuss">Обсудить проект</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-d="1">
+      <div class="card__plate card__plate--ceramic" aria-hidden="true"></div>
+      <div class="card__body">
+        <h3 class="card__h" data-i18n="svc2.title">Керамическое покрытие</h3>
+        <p class="card__p" data-i18n="svc2.desc">Составы 9H и 10H, нанесение в термостабильной камере, выдержка и полимеризация под ИК-лампой.</p>
+        <ul class="spec">
+          <li><span data-i18n="svc2.s1l">Срок</span><b data-i18n="svc2.s1v">4–7 дней</b></li>
+          <li><span data-i18n="svc2.s2l">Гарантия</span><b data-i18n="svc2.s2v">до 5 лет</b></li>
+          <li><span data-i18n="svc2.s3l">Слои</span><b data-i18n="svc2.s3v">2–4 + топ</b></li>
+        </ul>
+        <button class="card__toggle" aria-expanded="false" aria-controls="det2">
+          <span class="card__toggle-txt" data-i18n="services.more">Подробнее</span>
+        </button>
+        <div class="card__details" id="det2" hidden>
+          <ul>
+            <li data-i18n="svc2.d1">Обезжиривание и подготовка в термостабильной камере</li>
+            <li data-i18n="svc2.d2">Нанесение 2–4 слоёв состава 9H или 10H</li>
+            <li data-i18n="svc2.d3">Полимеризация под ИК-лампой, выдержка 24 часа</li>
+            <li data-i18n="svc2.d4">Гарантийный лист и регламент обслуживания</li>
+          </ul>
+        </div>
+        <button class="card__link" data-open-booking data-service="ceramic" data-i18n="services.discuss">Обсудить проект</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-d="2">
+      <div class="card__plate card__plate--exhaust" aria-hidden="true"></div>
+      <div class="card__body">
+        <h3 class="card__h" data-i18n="svc3.title">Технический тюнинг и выхлоп</h3>
+        <p class="card__p" data-i18n="svc3.desc">Чип-тюнинг с замерами, выпускные системы из нержавеющей стали ручной сварки, клапанные тракты с управлением из салона.</p>
+        <ul class="spec">
+          <li><span data-i18n="svc3.s1l">Срок</span><b data-i18n="svc3.s1v">5–14 дней</b></li>
+          <li><span data-i18n="svc3.s2l">Замеры</span><b data-i18n="svc3.s2v">До и после</b></li>
+          <li><span data-i18n="svc3.s3l">Материал</span><b data-i18n="svc3.s3v">AISI 304 / титан</b></li>
+        </ul>
+        <button class="card__toggle" aria-expanded="false" aria-controls="det3">
+          <span class="card__toggle-txt" data-i18n="services.more">Подробнее</span>
+        </button>
+        <div class="card__details" id="det3" hidden>
+          <ul>
+            <li data-i18n="svc3.d1">Замеры мощности до работ и после</li>
+            <li data-i18n="svc3.d2">Выпуск ручной сварки: AISI 304 или титан</li>
+            <li data-i18n="svc3.d3">Клапанная система с управлением из салона</li>
+            <li data-i18n="svc3.d4">Калибровка без выхода за ресурс агрегатов</li>
+          </ul>
+        </div>
+        <button class="card__link" data-open-booking data-service="tuning" data-i18n="services.discuss">Обсудить проект</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════════════════ ПРОЦЕСС ══════════════════════════ -->
+<section class="section section--tight" id="process">
+  <header class="shead">
+    <p class="kicker reveal" data-i18n="process.kicker">Порядок работы</p>
+    <h2 class="shead__h reveal" data-d="1" data-i18n="process.title">Автомобиль проходит четыре поста</h2>
+  </header>
+  <ol class="steps">
+    <li class="step reveal"><i>01</i><h4 data-i18n="process.t1">Приём и дефектовка</h4><p data-i18n="process.p1">Замер лака по 60 точкам, фотофиксация, письменное заключение до начала работ.</p></li>
+    <li class="step reveal" data-d="1"><i>02</i><h4 data-i18n="process.t2">Смета и согласование</h4><p data-i18n="process.p2">Вы получаете объём, срок и стоимость одним документом.</p></li>
+    <li class="step reveal" data-d="2"><i>03</i><h4 data-i18n="process.t3">Работа в закрытом боксе</h4><p data-i18n="process.p3">Один автомобиль на посту. Отчёт по этапам в мессенджер — по вашему запросу.</p></li>
+    <li class="step reveal" data-d="3"><i>04</i><h4 data-i18n="process.t4">Приёмка при свете</h4><p data-i18n="process.p4">Осмотр под гексагональными панелями вместе с вами. Гарантийный лист на руки.</p></li>
+  </ol>
+</section>
+
+<!-- ══════════════════════════ ГАЛЕРЕЯ ══════════════════════════ -->
+<section class="section" id="gallery">
+  <header class="shead shead--row">
+    <div>
+      <p class="kicker reveal" data-i18n="gallery.kicker">Портфолио ателье</p>
+      <h2 class="shead__h reveal" data-d="1" data-i18n-html="gallery.title.html">Работы, которые<br>говорят отражением</h2>
+    </div>
+    <div class="filters reveal" data-d="2" role="group" data-i18n-label="a11y.filters" aria-label="Фильтр работ">
+      <button class="chip is-on" data-filter="all" aria-pressed="true" data-i18n="filter.all">Все</button>
+      <button class="chip" data-filter="ba" aria-pressed="false" data-i18n="filter.ba">До и после</button>
+      <button class="chip" data-filter="gclass" aria-pressed="false" data-i18n="filter.gclass">G-Class</button>
+      <button class="chip" data-filter="sport" aria-pressed="false" data-i18n="filter.sport">Спорткары</button>
+      <button class="chip" data-filter="ceramic" aria-pressed="false" data-i18n="filter.ceramic">Керамика</button>
+    </div>
+  </header>
+
+  <div class="grid" id="grid">
+    <figure class="shot shot--wide reveal" data-tags="ba gclass" data-ba>
+      <div class="shot__img shot__img--g1"></div>
+      <div class="shot__img shot__img--g1after" data-after></div>
+      <div class="shot__handle" data-handle role="slider" tabindex="0" aria-label="До и после" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div>
+      <figcaption><b>Mercedes-Benz G 63 AMG</b><span data-i18n="shot1">Полировка в 3 этапа · керамика 10H</span></figcaption>
+    </figure>
+
+    <figure class="shot reveal" data-tags="ceramic sport" data-d="1">
+      <div class="shot__img shot__img--p1"></div>
+      <figcaption><b>Porsche 911 Turbo S</b><span data-i18n="shot2">Керамическое покрытие · 4 слоя</span></figcaption>
+    </figure>
+
+    <figure class="shot reveal" data-tags="gclass ceramic" data-d="2">
+      <div class="shot__img shot__img--g2"></div>
+      <figcaption><b>Mercedes-Benz G 500</b><span data-i18n="shot3">Детейлинг салона · нубук</span></figcaption>
+    </figure>
+
+    <figure class="shot reveal" data-tags="ba sport" data-d="1" data-ba>
+      <div class="shot__img shot__img--b1"></div>
+      <div class="shot__img shot__img--b1after" data-after></div>
+      <div class="shot__handle" data-handle role="slider" tabindex="0" aria-label="До и после" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div>
+      <figcaption><b>BMW M5 Competition</b><span data-i18n="shot4">Снятие голограмм · до и после</span></figcaption>
+    </figure>
+
+    <figure class="shot shot--tall reveal" data-tags="sport" data-d="2">
+      <div class="shot__img shot__img--l1"></div>
+      <figcaption><b>Lamborghini Urus</b><span data-i18n="shot5">Выпускная система · титан</span></figcaption>
+    </figure>
+
+    <figure class="shot reveal" data-tags="ceramic">
+      <div class="shot__img shot__img--r1"></div>
+      <figcaption><b>Range Rover Autobiography</b><span data-i18n="shot6">Керамика 9H · оптика</span></figcaption>
+    </figure>
+
+    <figure class="shot reveal" data-tags="ba ceramic" data-d="1" data-ba>
+      <div class="shot__img shot__img--a1"></div>
+      <div class="shot__img shot__img--a1after" data-after></div>
+      <div class="shot__handle" data-handle role="slider" tabindex="0" aria-label="До и после" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div>
+      <figcaption><b>Audi RS6 Avant</b><span data-i18n="shot7">Восстановление глубины цвета</span></figcaption>
+    </figure>
+
+    <figure class="shot shot--wide reveal" data-tags="gclass sport" data-d="2">
+      <div class="shot__img shot__img--g3"></div>
+      <figcaption><b>Brabus G 800</b><span data-i18n="shot8">Технический тюнинг · замеры на стенде</span></figcaption>
+    </figure>
+  </div>
+  <p class="grid__hint" data-i18n="gallery.hint">Карточки «до и после» — потяните разделитель.</p>
+</section>
+
+<!-- ══════════════════════════ ОТЗЫВЫ ══════════════════════════ -->
+<section class="section" id="reviews">
+  <header class="shead">
+    <p class="kicker reveal" data-i18n="reviews.kicker">Репутация, подтверждённая клиентами ателье</p>
+    <h2 class="shead__h reveal" data-d="1" data-i18n-html="reviews.title.html">Нас рекомендуют<br>не по рекламе</h2>
+  </header>
+
+  <div class="reviews">
+    <article class="rev reveal">
+      <div class="rev__top">
+        <div class="rev__ava rev__ava--1" aria-hidden="true"><span>Т.А.</span></div>
+        <div><b>Тимур А.</b><span>Mercedes-Benz G 63 AMG</span></div>
+      </div>
+      <blockquote data-i18n="rev1.text">Автомобиль забирали в состоянии, которое меня перестало устраивать после трёх лет эксплуатации.</blockquote>
+      <p class="rev__meta" data-i18n="rev1.meta">Полировка · керамика 10H</p>
+    </article>
+
+    <article class="rev reveal" data-d="1">
+      <div class="rev__top">
+        <div class="rev__ava rev__ava--2" aria-hidden="true"><span>Д.Р.</span></div>
+        <div><b>Диёр Р.</b><span>Porsche 911 Turbo S</span></div>
+      </div>
+      <blockquote data-i18n="rev2.text">Обратился по рекомендации и остался клиентом.</blockquote>
+      <p class="rev__meta" data-i18n="rev2.meta">Керамическое покрытие · 4 слоя</p>
+    </article>
+
+    <article class="rev reveal" data-d="2">
+      <div class="rev__top">
+        <div class="rev__ava rev__ava--3" aria-hidden="true"><span>С.Х.</span></div>
+        <div><b>Сардор Х.</b><span>BMW M5 Competition</span></div>
+      </div>
+      <blockquote data-i18n="rev3.text">Делали выпускную систему и настройку.</blockquote>
+      <p class="rev__meta" data-i18n="rev3.meta">Выпуск AISI 304 · чип-тюнинг</p>
+    </article>
+
+    <article class="rev reveal" data-d="1">
+      <div class="rev__top">
+        <div class="rev__ava rev__ava--4" aria-hidden="true"><span>Н.И.</span></div>
+        <div><b>Нигора И.</b><span>Range Rover Autobiography</span></div>
+      </div>
+      <blockquote data-i18n="rev4.text">Приёмку проводили вместе, под теми самыми панелями.</blockquote>
+      <p class="rev__meta" data-i18n="rev4.meta">Детейлинг салона · керамика 9H</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════════════════ ЗАПИСЬ ══════════════════════════ -->
+<section class="section section--book" id="booking">
+  <div class="book">
+    <div class="book__left">
+      <p class="kicker reveal" data-i18n="booking.kicker">Запись</p>
+      <h2 class="shead__h reveal" data-d="1" data-i18n="booking.title">Начнём с осмотра</h2>
+      <p class="book__lead reveal" data-d="2" data-i18n="booking.lead">Консультация проходит в ателье и занимает около сорока минут: дефектовка, замеры, письменная смета.</p>
+      <div class="reveal" data-d="3">
+        <button class="btn btn--gold book__cta" data-open-booking data-i18n="booking.cta">Открыть форму записи</button>
+      </div>
+    </div>
+
+    <dl class="contacts reveal" data-d="2">
+      <div><dt data-i18n="contacts.address">Адрес</dt><dd data-i18n-html="contacts.address.html">Ташкент, Мирзо-Улугбекский район<br>ориентир уточним при записи</dd></div>
+      <div><dt data-i18n="contacts.phone">Телефон</dt><dd><a href="tel:+998900000000">+998 90 000 00 00</a></dd></div>
+      <div><dt data-i18n="contacts.instagram">Instagram</dt><dd><a href="https://instagram.com/" target="_blank" rel="noopener">@streetvibetuning</a></dd></div>
+      <div><dt data-i18n="contacts.hours">Часы</dt><dd data-i18n="contacts.hours.v">Пн–Сб, 09:00 — 20:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <span class="foot__brand">Street Vibe Tuning</span>
+    <span class="foot__c" data-i18n="foot.tag">Ташкент · Тюнинг-ателье и студия детейлинга</span>
+    <span class="foot__y">© <span id="year">2026</span> SVT. <span data-i18n="foot.rights">Все права защищены.</span></span>
+  </div>
+</footer>
+
+<!-- ══════════════════════ МОДАЛЬНОЕ ОКНО ЗАПИСИ ═════════════════ -->
+<dialog class="modal" id="bookingModal" aria-labelledby="modalTitle">
+  <div class="modal__box">
+    <button class="modal__close" id="modalClose" data-i18n-label="form.close" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+
+    <!-- Панель 1: форма -->
+    <div class="modal__view" data-view="form">
+      <p class="kicker" data-i18n="booking.kicker">Запись</p>
+      <h2 class="modal__h" id="modalTitle" data-i18n="form.title">Заявка на консультацию</h2>
+      <p class="modal__sub" data-i18n="form.sub">Ответим в течение рабочего дня и предложим время осмотра.</p>
+
+      <form class="form" id="bookingForm" novalidate>
+        <div class="field">
+          <label for="f-name" data-i18n="form.name">Имя</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться">
+          <p class="err" data-err="name"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone" data-i18n="form.phone">Телефон</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" data-i18n-ph="form.phone.ph" placeholder="+998 __ ___ __ __">
+          <p class="err" data-err="phone"></p>
+        </div>
+        <div class="field">
+          <label for="f-car" data-i18n="form.car">Автомобиль</label>
+          <input id="f-car" name="car" type="text" data-i18n-ph="form.car.ph" placeholder="Марка, модель, год">
+          <p class="err" data-err="car"></p>
+        </div>
+        <div class="field">
+          <label for="f-service" data-i18n="form.service">Направление</label>
+          <select id="f-service" name="service">
+            <option value="detailing" data-i18n="form.opt.detailing">Премиум детейлинг</option>
+            <option value="ceramic" data-i18n="form.opt.ceramic">Керамическое покрытие</option>
+            <option value="tuning" data-i18n="form.opt.tuning">Технический тюнинг и выхлоп</option>
+            <option value="other" data-i18n="form.opt.other">Пока не определился</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="f-note"><span data-i18n="form.note">Задача</span> <span class="opt" data-i18n="form.note.opt">— по желанию</span></label>
+          <textarea id="f-note" name="note" rows="3" data-i18n-ph="form.note.ph" placeholder="Что хотите получить в результате"></textarea>
+        </div>
+
+        <button class="btn btn--gold btn--full" type="submit" id="submitBtn" data-i18n="form.submit">Отправить заявку</button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <!-- Панель 2: успешная отправка -->
+    <div class="modal__view" data-view="done" hidden>
+      <div class="done">
+        <div class="done__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2 class="modal__h" data-i18n="ok.title">Заявка принята</h2>
+        <p class="modal__sub" data-i18n="ok.text">Перезвоним в течение рабочего дня и предложим время осмотра.</p>
+        <button class="btn btn--ghost" id="doneClose" data-i18n="form.close">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
